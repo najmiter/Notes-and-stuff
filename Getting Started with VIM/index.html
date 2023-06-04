@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>Getting Started with VIM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <article class="main">
+    <h1>Getting Started with VIM</h1>
+    <h2>What is VIM</h2>
+    <p>
+      Vim is a text editor that comes pre-installed in <strong>Linux</strong> and <strong>macOS</strong>. It can help you pick up your typing speed and be more productive. It forces you to use the keyboard as much as possible. By doing that, it makes your coding speed faster as well. Its really basic looking interface can be changed by using plugins but that’s, of course, optional.
+    </p>
+
+    <h2>How to use VIM</h2>
+    <p>There’s two ways to do that:
+      <ol>
+        <li>You can just type <code>vi</code> on the terminal and hit enter.</li>
+        <li>Or you can also use the <code>vim</code> command to do the same.</li>
+      </ol>
+      </p>
+    <p>They are both the same but the <code>vim</code> command is for the newer version, known as <strong>Vim IMproved</strong>.</p>
+    <p>If you running the <code>vim</code> command gives you error, you have to install it first. You can do that by using the following command: </p><p><code>sudo apt install vim</code></p>
+    <br><br><br><br>
+    <h2>Editing text with VIM</h2>
+    <p>
+      Change directory to your project. Then run the command <code>vim</code> followed by the file that you want to edit. If the file exists, it will open it. If it doesn't, it'll first create it in memory and then open it.
+    </p>
+    <p>
+      VIM has two modes. By default, it will open the <strong>VIM</strong> editor in <strong>command mode</strong>. While the command mode is turned on, you can run commands that sepcific to the VIM editor only. To do that, you have to type <code>:</code> and then your command.
+    </p>
+    <p>
+      The other one mode is <strong>insert mode</strong>. While this mode is on, you can edit your text files.
+    </p>
+    <p>
+      Let's start with <strong>command mode</strong>! 🤩
+    </p>
+    <h3>Command Mode</h3>
+    <p>
+      As I said before, this is the default mode VIM opens up in when we first launch it. Let's learn how to use by running some commands and changing how our VIM editor looks 🥳
+    </p>
+    <p>
+      If you don't see a <code>:</code> at the bottom of your VIM, well type it! 😁. Now type <code>set number</code> and hit enter. Do it and see the result for yourself 🙃
+    </p>
+    <p>
+      Run another by typing <code>colorscheme slate</code>. This is a personal preference, you can opt from other themes as well. To find out what themes are available, press the <strong>tab</strong> key after typing <code>colorscheme</code>. That will suggest you all the themes and you should try all of them one by one 🥰
+    </p>
+    <br><br><br><br>
+    <p>
+      Then run <code>set autoindent</code>. This will indent your cursor when you're inside a code block.
+    </p>
+    <p>
+      Also run <code>set tabstop=2</code>. This is used for setting the size of your <strong>tab</strong>. Setting it 2 means, when you press the <strong>tab</strong> key, it will insert two spaces. This is also how much the auto indent will follow.
+    </p>
+    <h2>Let's do practical</h2>
+    
+    <p>
+      To help you see this better, let's create a file visually.
+    </p>
+    <div class="vim">
+      <ul>
+        <li>~$ vim main.cpp</li>
+      </ul>
+    </div>
+    <p>
+      This will open our file (if existed) otherwise it will create a temporary file with our specified name (<code>main.cpp</code> in this case) and then open it.
+    </p>
+    <div class="vim">
+      <ul>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>"main.cpp" [new]</li>
+      </ul>
+    </div>
+    <p>
+      I didn't have the <code>main.cpp</code> file so, in my case, this is how it looked like.
+    </p>
+    <p>
+      And right now, this is in <strong>command mode</strong>. Let's run those commands that we mentioned above. And to save some space, I will only show the bottom of the screen.
+    </p>
+    <p>
+      I will just type <code>:</code> and it will look something like this:
+    </p>
+    <div class="vim">
+      <ul>
+        <li>~</li>
+        <li>~</li>
+        <li>:</li>
+      </ul>
+    </div>
+    <p>
+      Let's try the <code>set number</code> command.
+    </p>
+    <div class="vim">
+      <ul>
+        <li>~</li>
+        <li>:set number</li>
+      </ul>
+    </div>
+    <p>
+      This will show the <em>line number</em> while writing your code or any text file. And your editor shall now look something like:
+    </p>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="vim">
+      <ul>
+        <li>1. |</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>:set number</li>
+      </ul>
+    </div>
+    <p>
+      You can and should try all of the other commands mentioned earlier. I'll show you one more here.
+    </p>
+    <div class="vim">
+      <ul>
+        <li>~</li>
+        <li>:set mouse=a</li>
+      </ul>
+    </div>
+    <p>
+      This will allow you to select and move around the text using your <em>mouse</em> like any other text editor.
+    </p>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <h3>INSERT Mode</h3>
+    <p>
+      There are multiple ways that you can enter the insert mode depending on where you want to insert. Let's go over them one by one.
+    </p>
+    <p>
+      <strong>🔥</strong> By pressing <code>i</code> from the keyboard... This is the normal way of entering the <strong>insert mode</strong>. This activates the cursor at the previous position when the <strong>command mode</strong> was activated. By default, it's the beginning of the file.
+    </p>
+    <p>
+      As soon as you hit <code>i</code> from your keyboard when in <strong>command mode</strong>, you will see the things changing.
+    </p>
+    <div class="vim">
+      <ul>
+        <li>1. |</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- INSERT --</li>
+      </ul>
+    </div>
+    <p>
+      The INSERT at the bottom indicates that you are in the insert mode. It will stay there as long as you don't press <code>esc</code> key. Pressing the <code>esc</code> key, switches the mode to <strong>command mode</strong>.
+    </p>
+    <p>
+      But let's stay in the insert mode and let's write some code now. <code>C++</code> code, to be precise.
+    </p>
+    <br><br><br><br><br><br>
+
+    <div class="vim">
+      <ul>
+        <li>1. #include &lt;iostream&gt;</li>
+        <li>2. </li>
+        <li>3. int main() {</li>
+        <li>4. &nbsp;&nbsp;std::cout &lt;&lt; "Hello World\n";</li>
+        <li>5. </li>
+        <li>6. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- INSERT --</li>
+      </ul>
+    </div>
+    <p>
+      Let's now save this file. For that, we need to switch back to the <strong>command mode</strong>. Hit <code>esc</code> key and the INSERT text from the bottom will vanish. Type the command to write/save your content. The command is <code>w</code>.
+    </p>
+    <div class="vim">
+      <ul>
+        <li>6. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>:w</li>
+      </ul>
+    </div>
+    <p>
+      To get out of the <strong>VIM</strong> editor back into terminal, you can use the quit command which is <code>q</code>.
+    </p>
+    <br><br><br><br><br>
+
+    <div class="vim language-bash">
+      <ul>
+        <li>6. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>:q</li>
+      </ul>
+    </div>
+    <p>
+      Alternatively, you could execute both of these commands at the same time. To do that, type <code>:wq</code>. This will write, and quit the file.
+    </p>
+    <p>
+      You will be brought back to the terminal. Let's compile and run our code using <code>g++</code>.
+    </p>
+    <div class="vim">
+      <ul>
+        <li>~$ |</li>
+      </ul>
+    </div>
+    <p>
+      <h3>Compiling the code</h3>
+      Type the command:
+    </p>
+    <div class="vim">
+      <ul>
+        <li>~$ g++ main.cpp && ./a.out</li>
+      </ul>
+    </div>
+    <p>
+      This will compile and run the code. To give you some extra information about the <code>g++</code> command, the <code>g++</code> in the command above is the name of the compiler. <code>main.cpp</code> is the name of the file. These two are the required keywords. Optionally, you can give flags to the command like <code>-o</code> which means to what file we want our binaries to be in. That is actually the binary code that will eventually be run by the processor.
+    </p>
+    <br><br>
+
+    <p>
+      Another very useful flag to the <code>g++</code> command, is the <strong>standard</strong> for <code>C++</code>. If you don't know, C++ has many versions. <strong>C++23</strong> is the latest. They've been releasing a new standard every three years since 2011.
+    </p>
+    <p>
+      To specify the standard that you want to compile your code with, you can use the <code>-std</code> flag. If say, you wanted to compile <code>main.cpp</code> with <strong>C++20</strong>, you would specify that by executing the following command.
+    </p>
+    <p>
+      <code>g++ -std=c++2a main.cpp</code>
+    </p>
+    <p>
+      Now, let's get back to the <strong>VIM</strong> editor. Type the same command as before: <code>vim main.cpp</code> and it will launch the editor in the command mode.
+    </p>
+    <h3>Different INSERT Modes</h3>
+    <p>
+      <strong>🔥</strong> Pressing <code>o</code> key from the keyboard will also enter the <strong>insert mode</strong> but it will insert a new line <strong>below</strong> whichever line the cursor was. Consider the following example when the cursor is on the second line and I press <code>o</code>.
+    </p>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    
+    <div class="vim">
+      <ul>
+        <li>1. #include &lt;iostream&gt;</li>
+        <li>2. |</li>
+        <li>3. int main() {</li>
+        <li>4. &nbsp;&nbsp;std::cout &lt;&lt; "Hello World\n";</li>
+        <li>5. </li>
+        <li>6. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>"main.cpp" 6L, 62B</li>
+      </ul>
+    </div>
+    <p>
+      As soon as I press the <code>o</code> key,
+    </p>
+    <div class="vim">
+      <ul>
+        <li>1. #include &lt;iostream&gt;</li>
+        <li>2. </li>
+        <li>3. |</li>
+        <li>4. int main() {</li>
+        <li>5. &nbsp;&nbsp;std::cout &lt;&lt; "Hello World\n";</li>
+        <li>6. </li>
+        <li>7. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- INSERT --</li>
+      </ul>
+    </div>
+    <br><br>
+    <p>
+      Notice that it inserted a new line below the position of the cursor and also entered the <strong>insert mode</strong>.
+    </p>
+    <p>
+      <strong>🔥</strong> Pressing <code>a</code> key from the keyboard will enter the <strong>insert mode</strong> in the <strong>append mode</strong>. What that means is that; unlike the normal insert mode where, when you enter it, the characters are inserted after the cursor, the characters are inserted before the cursor's position. Let's see that in action:
+    </p>
+    <div class="vim">
+      <ul>
+        <li>1. #include &lt;iostream&gt;</li>
+        <li>2. </li>
+        <li>4. int m<span class="cursor">a</span>in() {</li>
+        <li>5. &nbsp;&nbsp;std::cout &lt;&lt; "Hello World\n";</li>
+        <li>6. </li>
+        <li>7. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- INSERT --</li>
+      </ul>
+    </div>
+    <p>
+      While I'm in <strong>append insert mode</strong>, if I enter a character, it'll be inserted before the cursor. Let's enter something:
+    </p>
+    <br><br><br><br><br><br><br>
+    <div class="vim">
+      <ul>
+        <li>1. #include &lt;iostream&gt;</li>
+        <li>2. </li>
+        <li>4. int ms<span class="cursor">a</span>in() {</li>
+        <li>5. &nbsp;&nbsp;std::cout &lt;&lt; "Hello World\n";</li>
+        <li>6. </li>
+        <li>7. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- INSERT --</li>
+      </ul>
+    </div>
+    <p>
+      I entered <strong>s</strong> and it inserted it behind the cursor's position.
+    </p>
+    <div class="note">
+      <p>You can try the <strong>upper cases</strong> of these insert modes as well! What that means is that you can also, when the <strong>command mode</strong> is active, press <code>I</code>, <code>O</code>, and <code>A</code>.</p>
+      <ul>
+        <li><code>I</code> will enter the <strong>insert mode</strong> and take the cursor to the beginning of the current line.</li>
+        <li><code>O</code> will insert a new line above the line where the cursor was and then enter the <strong>insert mode</strong>.</li>
+        <li><code>A</code> will take the cursor to the end of the line.</li>
+      </ul>
+    </div>
+    <br><br><br><br><br><br>
+    <h3>Selecting text</h3>
+    <p>
+      Let's now talk about how you can select text.
+    </p>
+    <p>
+      Pressing <code>v</code> while in <strong>command mode</strong> will turn on the <strong>visual mode</strong>. Let's have a look.
+    </p>
+    <div class="vim">
+      <ul>
+        <li>1. #include &lt;iostream&gt;</li>
+        <li>2. </li>
+        <li>4. int main() {</li>
+        <li>5. &nbsp;&nbsp;std::<span class="cursor">c</span>out &lt;&lt; "Hello World\n";</li>
+        <li>6. </li>
+        <li>7. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- VISUAL --</li>
+      </ul>
+    </div>
+    <p>
+      While in <strong>visual mode</strong>, press the arrow keys from the keyboard to select text in any direction. Let's select some stuff:
+    </p>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="vim">
+      <ul>
+        <li>1. #include &lt;iostream&gt;</li>
+        <li>2. </li>
+        <li>4. int main() {</li>
+        <li>5. &nbsp;&nbsp;std::<span class="cursor">cout &lt;&lt;</span> "Hello World\n";</li>
+        <li>6. </li>
+        <li>7. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- VISUAL --</li>
+      </ul>
+    </div>
+    <div class="note">
+      <p>Pretty much every command can be mixed with numbers. Type in any number before hitting any command and see the result.</p>
+    </div>
+    <p>
+      Let's practice that on selecting some text. If press <code>5</code> and then <code>➡️</code>, it will select 5 characters to the right side of the cursor. Similarly, you can type any number and then hit <strong>up arrow</strong> or <strong>down arrow</strong> and it will select that number of lines at once.
+    </p>
+    <div class="note">
+      <p>Similarly, you can try the <strong>upper case</strong> on this as well. <code>V</code> will select the entire line the cursor was on.</p>
+    </div>
+    <p>
+      Another very useful way to select any block entirely, is by first entering the <strong>visual mode</strong> and then pressing <code>i</code> followed by the kind of block you're in that you want to select.
+    </p>
+    <br><br><br>
+    <p>
+      What that means is that, let's suppose, you're inside the <code>main()</code> function. Its block is enclosed between <code>{ }</code> brackets. To select the entire block, I can then hit <code>i{</code> while in <strong>visual mode</strong>. The results are:
+    </p>
+    <div class="vim">
+      <ul>
+        <li>1. #include &lt;iostream&gt;</li>
+        <li>2. </li>
+        <li>4. int main() {</li>
+        <li>5. <span class="cursor">&nbsp;&nbsp;std::cout &lt;&lt; "Hello World\n";</span></li>
+        <li>6. </li>
+        <li>7. }</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- VISUAL --</li>
+      </ul>
+    </div>
+    <p>
+      Because in this case, we only had one line, that's what got selected. You should try it with bigger blocks.
+    </p>
+    <div class="note">
+      <p>One thing that I see all the time among learners is that they only do what they're told like robots. Meaning: I've shown an example to select a block that's enclosed in <code>{ }</code>, but that's <strong>not all</strong>! You can use <code>" "</code>, <code>[ ]</code>, <code>( )</code> or whatever and this will still work the same.</p>
+    </div>
+    <br><br><br><br><br>
+    <h3>Copying & Pasting text</h3>
+    <p>
+      Now, that we know how to select any text, let's also <strong>copy</strong> and paste it.
+    </p>
+    <p>
+      Copying can be done by pressing <code>y</code> in <strong>command mode</strong>. This will copy anything that you'd have copied prior to the execution of the copying command. The <strong>y</strong> means to <strong>yank</strong>.
+    </p>
+    <p>
+      Another way to do it is, of course, the <strong>upper case</strong> <code>Y</code>. This will copy the whole line that your cursor was on.
+    </p>
+    <p>
+      To <strong>paste</strong>, you can simply take your cursor wherever and hit <code>p</code>. (Needless to say, in the <strong>command mode</strong>). This will paste the line that you copied below the line where your cursor is. If you want to paste it on the same line as your cursor, use the <strong>upper case</strong> version of the <strong>paste</strong> command. <code>P</code> will paste it on the same line.
+    </p>
+    <div class="note">
+      <p>As mentioned before, you can mix numbers with your commands. Try typing any number before hitting <code>p</code> or <code>P</code> and see the magic 🥹</p>
+    </div>
+    <h3>Deleting text</h3>
+    <p>
+      Let's now see how you can delete certain text.
+    </p>
+    <p>
+      Deleting is as easy as the other commands so far 😁. Press <code>d</code> and then use <strong>arrow keys</strong>. It will delete one character to whichever side you pick. Or it will delete the entire lines if you press the <strong>up</strong> or <strong>down</strong> key.
+    </p>
+    <br><br><br><br>
+    <p>
+      To delete the entire line at once, use the <strong>upper case</strong> version (i.e., <code>D</code> will delete the entire line that the cursor was on). The same thing can be done if you press the <strong>lower case</strong> <code>d</code> twice. The difference is that, <strong>lower case</strong> will also remove the line whereas the <strong>upper case</strong> will only delete the contents on that line. Try it yourself to understand it better.
+    </p>
+    <p style="font-family: 'Times New Roman', Times, serif; font-style: italic;">
+      There's so many more ways of doing this, but this tutorial is only to get you started with using VIM. You can learn the others on your own later, or if you liked this one, I'll make one like this one with much more details.
+    </p>
+    <h3>Replacing text</h3>
+    <p>
+      You can also replace a character by pressing the <code>r</code> key. It will replace the character that was below the cursor with the one you type after pressing <strong>r</strong>. Immediately after, it will return back to the <strong>command mode</strong> though. If you want to keep replacing, use the <strong>upper case</strong> version. This will keep you in the <strong>replace mode</strong> and replace each character with whatever you type. Press <code>esc</code> to get out of the <strong>replace mode</strong>.
+    </p>
+
+    <h3>Undoing & redoing</h3>
+    <p>
+      Don't use <code>ctrl + z</code> 🥴!
+    </p>
+    <p>
+      To <strong>undo</strong> your previous action, press <code>u</code>. You can also mix it with numbers and it will do that number of undos.
+    </p>
+    <p>
+      To <strong>redo</strong> your action, use <code>ctrl + r</code> keybinding.
+    </p>
+    <br><br><br>
+    <h3>Moving around the text</h3>
+    <p>
+      You can move your cursor or you can just use your keyboard for that too. And I'm not talking about the arrow keys. You can use <code>w</code>, <code>e</code>, <code>W</code>, and <code>E</code> to move <strong>forward</strong>. There's not much difference among these. Try them yourself and observe yourself.
+    </p>
+    <p>
+      To move <strong>backwards</strong>, you can use <code>b</code> and <code>B</code>.
+    </p>
+    <div class="note">
+      <p>I'd like to remind you again that mixing numbers with commands is really fun. Try numbers with these commands that you just learned. Also, try mixing numbers with arrow keys. Try <code>10 ➡️</code> to move around.</p>
+    </div>
+
+    <h2>Saving your settings permanently</h2>
+    <p>
+      The settings that you set at the beginning will work until you don't restart. When you relaunch your VIM again, it'll fall back to its default. Let's fix that!
+    </p>
+    <div class="vim">
+      <ul>
+        <li>~$ vim ~/.vimrc</li>
+      </ul>
+    </div>
+    <p>
+      This will (if existed or create from scratch and then) open it. It will probably be empty. Enter the <strong>insert mode</strong> and start adding all of those commands. I'll show a demo here too:
+    </p>
+    <br><br><br><br><br><br>
+    <div class="vim">
+      <ul>
+        <li>set number</li>
+        <li>set autoindent</li>
+        <li>set tabstop=2</li>
+        <li>set mouse=a</li>
+        <li>colorscheme slate</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li>~</li>
+        <li style="color: orange;">-- INSERT --</li>
+      </ul>
+    </div>
+    <p>
+      You can add other settings as if you want. And you can also change this file later anytime. After that, press <code>esc</code> to enter the <strong>command mode</strong> and type the command <code>:wq</code> to save and close the file.
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <div class="final">
+      <p>Made by the people for the people.</p>
+      <a href="https://www.youtube.com/najmiter" target="_blank">YouTube</a>
+      <br>
+      <a href="https://www.github.com/najmiter" target="_blank">Github</a>
+    </div>
+  </article>
+
+</body>
+</html>
