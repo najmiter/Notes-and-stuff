@@ -22,7 +22,7 @@
       </p>
     <p>They are both the same but the <code>vim</code> command is for the newer version, known as <strong>Vim IMproved</strong>.</p>
     <p>If you running the <code>vim</code> command gives you error, you have to install it first. You can do that by using the following command: </p><p><code>sudo apt install vim</code></p>
-    <br><br><br><br>
+    
     <h2>Editing text with VIM</h2>
     <p>
       Change directory to your project. Then run the command <code>vim</code> followed by the file that you want to edit. If the file exists, it will open it. If it doesn't, it'll first create it in memory and then open it.
@@ -46,7 +46,6 @@
     <p>
       Run another by typing <code>colorscheme slate</code>. This is a personal preference, you can opt from other themes as well. To find out what themes are available, press the <strong>tab</strong> key after typing <code>colorscheme</code>. That will suggest you all the themes and you should try all of them one by one 🥰
     </p>
-    <br><br><br><br>
     <p>
       Then run <code>set autoindent</code>. This will indent your cursor when you're inside a code block.
     </p>
@@ -107,7 +106,6 @@
     <p>
       This will show the <em>line number</em> while writing your code or any text file. And your editor shall now look something like:
     </p>
-    <br><br><br><br><br><br><br><br><br><br>
     <div class="vim">
       <ul>
         <li>1. |</li>
@@ -133,8 +131,6 @@
     <p>
       This will allow you to select and move around the text using your <em>mouse</em> like any other text editor.
     </p>
-    <br><br><br><br><br><br><br><br><br><br>
-
     <h3>INSERT Mode</h3>
     <p>
       There are multiple ways that you can enter the insert mode depending on where you want to insert. Let's go over them one by one.
@@ -160,8 +156,6 @@
     <p>
       But let's stay in the insert mode and let's write some code now. <code>C++</code> code, to be precise.
     </p>
-    <br><br><br><br><br><br>
-
     <div class="vim">
       <ul>
         <li>1. #include &lt;iostream&gt;</li>
@@ -190,8 +184,6 @@
     <p>
       To get out of the <strong>VIM</strong> editor back into terminal, you can use the quit command which is <code>q</code>.
     </p>
-    <br><br><br><br><br>
-
     <div class="vim language-bash">
       <ul>
         <li>6. }</li>
@@ -223,8 +215,6 @@
     <p>
       This will compile and run the code. To give you some extra information about the <code>g++</code> command, the <code>g++</code> in the command above is the name of the compiler. <code>main.cpp</code> is the name of the file. These two are the required keywords. Optionally, you can give flags to the command like <code>-o</code> which means to what file we want our binaries to be in. That is actually the binary code that will eventually be run by the processor.
     </p>
-    <br><br>
-
     <p>
       Another very useful flag to the <code>g++</code> command, is the <strong>standard</strong> for <code>C++</code>. If you don't know, C++ has many versions. <strong>C++23</strong> is the latest. They've been releasing a new standard every three years since 2011.
     </p>
@@ -241,7 +231,6 @@
     <p>
       <strong>🔥</strong> Pressing <code>o</code> key from the keyboard will also enter the <strong>insert mode</strong> but it will insert a new line <strong>below</strong> whichever line the cursor was. Consider the following example when the cursor is on the second line and I press <code>o</code>.
     </p>
-    <br><br><br><br><br><br><br><br><br><br><br>
     
     <div class="vim">
       <ul>
@@ -275,7 +264,6 @@
         <li style="color: orange;">-- INSERT --</li>
       </ul>
     </div>
-    <br><br>
     <p>
       Notice that it inserted a new line below the position of the cursor and also entered the <strong>insert mode</strong>.
     </p>
@@ -299,7 +287,6 @@
     <p>
       While I'm in <strong>append insert mode</strong>, if I enter a character, it'll be inserted before the cursor. Let's enter something:
     </p>
-    <br><br><br><br><br><br><br>
     <div class="vim">
       <ul>
         <li>1. #include &lt;iostream&gt;</li>
@@ -325,7 +312,6 @@
         <li><code>A</code> will take the cursor to the end of the line.</li>
       </ul>
     </div>
-    <br><br><br><br><br><br>
     <h3>Selecting text</h3>
     <p>
       Let's now talk about how you can select text.
@@ -350,7 +336,6 @@
     <p>
       While in <strong>visual mode</strong>, press the arrow keys from the keyboard to select text in any direction. Let's select some stuff:
     </p>
-    <br><br><br><br><br><br><br><br><br>
     <div class="vim">
       <ul>
         <li>1. #include &lt;iostream&gt;</li>
@@ -377,7 +362,6 @@
     <p>
       Another very useful way to select any block entirely, is by first entering the <strong>visual mode</strong> and then pressing <code>i</code> followed by the kind of block you're in that you want to select.
     </p>
-    <br><br><br>
     <p>
       What that means is that, let's suppose, you're inside the <code>main()</code> function. Its block is enclosed between <code>{ }</code> brackets. To select the entire block, I can then hit <code>i{</code> while in <strong>visual mode</strong>. The results are:
     </p>
@@ -401,7 +385,6 @@
     <div class="note">
       <p>One thing that I see all the time among learners is that they only do what they're told like robots. Meaning: I've shown an example to select a block that's enclosed in <code>{ }</code>, but that's <strong>not all</strong>! You can use <code>" "</code>, <code>[ ]</code>, <code>( )</code> or whatever and this will still work the same.</p>
     </div>
-    <br><br><br><br><br>
     <h3>Copying & Pasting text</h3>
     <p>
       Now, that we know how to select any text, let's also <strong>copy</strong> and paste it.
@@ -425,7 +408,6 @@
     <p>
       Deleting is as easy as the other commands so far 😁. Press <code>d</code> and then use <strong>arrow keys</strong>. It will delete one character to whichever side you pick. Or it will delete the entire lines if you press the <strong>up</strong> or <strong>down</strong> key.
     </p>
-    <br><br><br><br>
     <p>
       To delete the entire line at once, use the <strong>upper case</strong> version (i.e., <code>D</code> will delete the entire line that the cursor was on). The same thing can be done if you press the <strong>lower case</strong> <code>d</code> twice. The difference is that, <strong>lower case</strong> will also remove the line whereas the <strong>upper case</strong> will only delete the contents on that line. Try it yourself to understand it better.
     </p>
@@ -447,7 +429,7 @@
     <p>
       To <strong>redo</strong> your action, use <code>ctrl + r</code> keybinding.
     </p>
-    <br><br><br>
+
     <h3>Moving around the text</h3>
     <p>
       You can move your cursor or you can just use your keyboard for that too. And I'm not talking about the arrow keys. You can use <code>w</code>, <code>e</code>, <code>W</code>, and <code>E</code> to move <strong>forward</strong>. There's not much difference among these. Try them yourself and observe yourself.
@@ -471,7 +453,6 @@
     <p>
       This will (if existed or create from scratch and then) open it. It will probably be empty. Enter the <strong>insert mode</strong> and start adding all of those commands. I'll show a demo here too:
     </p>
-    <br><br><br><br><br><br>
     <div class="vim">
       <ul>
         <li>set number</li>
