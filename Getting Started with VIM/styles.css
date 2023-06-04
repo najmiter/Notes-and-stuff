@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+html {
+  /* width: 100%; */
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  margin: 2rem 0;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0 1.2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 3rem 0 1.2rem;
+  position: relative;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.04rem;
+}
+
+strong, em {
+  font-size: inherit;
+}
+
+article {
+  max-width: 67ch;
+  margin: auto;
+}
+
+code {
+  font-family: "PT Mono", monospace;
+  background-color: #636363;
+  border-radius: 5px;
+  padding: 1px 5px;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+li {
+  margin-left: 4rem;
+  line-height: 2;
+  font-family: "Roboto";
+  font-size: 1.2rem;
+}
+
+.vim,
+.vim * {
+  background-color: rgb(41, 41, 41);
+  color: rgb(255, 245, 245);
+  font-family: 'PT Mono', monospace;
+}
+
+.vim {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-radius: 5px;
+}
+
+.vim li {
+  list-style: none;
+}
+
+.cursor {
+  background-color: rgb(185, 185, 185);
+  padding: 1px;
+  color: rgb(83, 83, 83);
+}
+
+.note {
+  font-family:'Times New Roman', Times, serif;
+  padding: 1rem;
+  background-color: #864f4f;
+  margin: 1.5rem 0;
+  border-radius: 5px;
+}
+
+.note p {
+  margin: 0;
+}
+
+li {
+  font-family: inherit;
+}
+
+.note code {
+  background-color: #a7a7a7;
+}
+
+.final {
+  text-align: center;
+  font-family: 'PT Mono';
+  margin: 1.5rem 0;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: tomato;
+  margin: 1.5rem 0;
+}
+
+@media print {
+  html {
+    margin: 2rem 0;
+  }
+}
